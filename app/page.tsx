@@ -64,7 +64,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center">
           <h1>Somos unidos pela leitura!</h1>
           <div className="flex gap-6">
-            <h2>seja exigente ao escolher a edição dos seus livros</h2>
+            <h2>seja exigente ao escolher a edição dos seus livros!</h2>
             <h2>Monte sua própria biblioteca em casa</h2>
           </div>
           <button>
