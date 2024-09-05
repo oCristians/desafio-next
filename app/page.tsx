@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Barra from "@/components/Barra";
+import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <>
-      <Barra />
-      <div className="flex justify-center gap-1 p-2 items-center self-stretch text-[#E9DFCC] bg-[#6C4633]">
+      <Navbar />
+      <button className="flex justify-center gap-1 p-2 items-center w-max self-stretch text-[#E9DFCC] bg-[#6C4633]">
         <p className="font-bold text-[#F3A36B]"> CONFIRA</p> AGORA O BOX DO MÊS
-      </div>
+      </button>
       <div className="flex flex-col h-auto p-12 bg-[#352630] ">
         <div className="flex">
           <div>
