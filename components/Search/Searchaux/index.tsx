@@ -1,7 +1,5 @@
-import PostCard from "../PostCard";
-
 export default function Searchs() {
-    const count = 1;
+    const count = 0;
     return(
         <div>
             <form className="flex" autoComplete="off">
@@ -20,11 +18,6 @@ export default function Searchs() {
                     </div>
                 </div>
             </form>
-            <div className="flex justify-center">
-            {count === 0 ? (<div className="flex justify-center py-20 text-2xl text-[#E9DFCC]">Nenhuma publicação encontrada</div>)
-            : (<div className="grid grid-cols-3 items-center"><PostCard/><PostCard/></div>)
-            }
-            </div>
         </div>
     );
 }
