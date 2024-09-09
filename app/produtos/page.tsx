@@ -2,8 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Searchs from "@/components/Search/Searchaux";
 import Image from "next/image";
-import PostCard from "@/components/PostCard";
-export default function Page() {
+import { getProducts } from "@/actions/home/actions";
+import CurrentCollection from '@/components/ProductsPage/CurrentCollection';
+import Search from "@/components/Search";
+export default async function Page() {
+    const post = await getProducts()
     return(
       <body>
         <Navbar/>
@@ -21,17 +24,12 @@ export default function Page() {
           height={353}/>
           <div className="flex flex-col font-bold">Lendas Japonesas <p>R$ 69,90</p></div>
         </div>
-
-        <div className="flex bg-[#352630] justify-center items-center gap-20">
+        <div className="flex bg-[#352630] justify-center w-full items-center gap-20">
           <p className="text-[#E9DFCC] font-bold
           text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">Coleção Atual</p>
-          <Searchs/>
+          <div className="w-80"><Search/></div>
         </div>
-
-        <div className="flex flex-col items-center bg-[#23161F]">
-          <div className="grid grid-cols-3 justify-center items-center"><PostCard/><PostCard/><PostCard/><PostCard/></div>
-          <div></div>
-        </div>
+        <CurrentCollection posts={post}/>
         <Footer/>
       </body>
     )

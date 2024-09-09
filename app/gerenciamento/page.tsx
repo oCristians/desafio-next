@@ -2,7 +2,14 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Link from 'next/link'
 import { DeleteButton, EditButton, ViewButton } from "@/components/Buttons";
-export default function Page() {
+import { getProducts } from "@/actions/home/actions";
+import { SomeProducts } from "@/types/data";
+import PostCard from "@/components/PostCard";
+import PostTableCard from "@/components/PostTableCard";
+import Table from "@/components/Table";
+
+export default async function Page() {
+    const post = await getProducts()
     return(
       <div className="flex flex-col gap-6 h-screen bg-[#352630]" >
         <Navbar/>
@@ -16,42 +23,7 @@ export default function Page() {
             </Link>
           </div>
         </div>
-        <div className="text-[#E9DFCC] flex relative overflow-x-auto shadow-md sml:rounded-lg bg-[#6C4633]">
-          <table className="w-full text-base text-left">
-            <thead className="uppercase bg-[#6C4633]">
-              <tr>
-                <th scope="col" className="px-6 py-3">
-                  ID
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Nome
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Descrição
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Valor
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Ações
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-[#898458] border-b hover:bg-[#746f4a]">
-                <th className="px-6 py-6 font-medium">1</th>
-                <th>Novo box de receberson</th>
-                <th>o novo box apresenta mil la ele mil vezes o novo box apresenta mil la ele mil vezes </th>
-                <th>1000 R$</th>
-                <th className="px-6 py-6 gap-1 flex flex-col lg:flex-row items-center">
-                  <ViewButton id={1}/>
-                  <EditButton id={1}/>
-                  <DeleteButton id={1}/>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-        </div>{/*Aqui vai ficar a tabela*/}
+        <Table posts={post}/>
       </div>
     )
   }
