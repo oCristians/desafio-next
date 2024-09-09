@@ -2,6 +2,7 @@ import prisma from "@/lib/db"
 const itemsPerPage = 6;
 
 export async function fetchFilteredPosts(query: string, currentPage: number){
+    const offset = (currentPage - 1) * itemsPerPage
     const posts = await prisma.post.findMany({
         where:{
             OR: [{name: {contains: query, mode: "insensitive"}}]
@@ -9,12 +10,16 @@ export async function fetchFilteredPosts(query: string, currentPage: number){
         orderBy:{
             name: "asc"
         },
-        take: itemsPerPage
+        take: itemsPerPage,
+        skip: offset
     });
     const count = await prisma.post.count({
         where:{
             OR: [{name: {contains: query, mode: "insensitive"}}]
         }
     });
-    return {posts, count};
+
+    const totalPages =  Math.ceil(count / itemsPerPage)
+
+    return {posts, count, totalPages};
 }

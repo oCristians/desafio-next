@@ -1,4 +1,5 @@
 'use client'
+import { deletePost } from '@/actions/admin/posts/actions';
 import Link from 'next/link'
 export function ViewButton({ id }: { id: number }){
     return(
@@ -14,7 +15,7 @@ export function EditButton({ id }: { id: number }){
 }
 export function DeleteButton({ id }: { id: number }){
     return(
-        <button className="text-[#352630] font-bold bg-red-600 flex rounded-xl my-1 gap-1 px-2">
+        <button onClick={() => deletePost(id)} className="text-[#352630] font-bold bg-red-600 flex rounded-xl my-1 gap-1 px-2">
             Deletar <i className="bi bi-x-lg"></i></button>
     );
 }

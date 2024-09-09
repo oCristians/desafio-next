@@ -14,6 +14,7 @@ export async function getBestProducts(){
     })
     return posts;
 }
+
 export async function getProducts(){
     const posts= await prisma.post.findMany({
         select: {

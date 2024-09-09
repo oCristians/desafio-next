@@ -3,9 +3,9 @@ import { useSearchParams } from "next/navigation";
 import PostCard from "../PostCard";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { fetchFilteredPosts } from "@/actions/search/actions";
 
 export default function Search() {
-    const count = 0;
     const searchParams = useSearchParams()
     const router = useRouter()
     const [searchTerm,setSearchTerm] = useState<string | ''>(searchParams.get('query') || '')

@@ -1,4 +1,5 @@
-export default function Page() {
+export default async function Page() {
+
     return(
         <form autoComplete="off" className="w-full lg:w-4/12 xl:w-7/12 2xl:w-5/12 gap-3 flex flex-col p-4 justify-center items-center rounded-xl bg-[#643D2A] ">
             <div className="w-full flex justify-end text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl text-[#E9DFCC]">
