@@ -20,10 +20,16 @@ export async function fetchPosts(currentPage: number){
     return {posts, totalPages}
 }
 export async function fetchPostById(id:number | undefined) {
-    const product = await prisma.post.findUnique({
+    const post = await prisma.post.findUnique({
         where:{id},
+        select: {
+            id:true,
+            name:true,
+            price:true,
+            content:true,
+        }
     })
-    return product;
+    return post;
 }
 const itemsAdminPerPage = 4;
 export async function fetchAdminPosts(currentPage: number){
