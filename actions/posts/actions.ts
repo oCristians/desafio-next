@@ -37,7 +37,7 @@ export async function fetchAdminPosts(currentPage: number){
 
     const posts = await prisma.post.findMany({
         orderBy:{
-            name:"asc"
+            id:"asc"
         },
         take:itemsAdminPerPage,
         skip: offset

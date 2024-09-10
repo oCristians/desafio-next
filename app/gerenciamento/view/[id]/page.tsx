@@ -6,9 +6,7 @@ import ViewAux from '@/components/Gerenciamento/ViewAux';
 type Livros = {
     post: Livro
 }
-export default async function Page({params}: {
-    params: { id: string}
-}) {
+export default async function Page({params}: {params: { id: string}}) {
     const id = parseInt(params.id, 10)
     const post = await fetchPostById(id);
     return(

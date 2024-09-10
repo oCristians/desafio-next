@@ -26,15 +26,18 @@ export async function createPost(formData: FormData) {
     }
 }
 
-export async function editPost(id: number, post: {name: string, price: number, content: string}) {
+export async function editPost(formData: FormData) {
+    const name = formData.get("name") as string;
+    const price = formData.get("price") as string;
+    const content = formData.get("content") as string;
+    const idstring = formData.get("id") as string;
+    const id = Number(idstring);
     await prisma.post.update({
-        where:{
-            id,
-        },
+        where:{id},
         data: {
-            name: post.name,
-            price: post.price,
-            content: post.content,
+            name: name,
+            price: Number(price),
+            content: content,
         },
     });
 
