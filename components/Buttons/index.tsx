@@ -1,6 +1,7 @@
 'use client'
 import { deletePost } from '@/actions/admin/posts/actions';
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 export function ViewButton({ id }: { id: number }){
     return(
         <Link href={`gerenciamento/view/${id}`} className="text-[#352630] font-bold my-1 bg-green-600 flex rounded-xl gap-1 px-2">
@@ -14,8 +15,17 @@ export function EditButton({ id }: { id: number }){
     );
 }
 export function DeleteButton({ id }: { id: number }){
+    const router = useRouter()
+    function deleteClick(id:number){
+        deletePost(id)
+        setTimeout(() => {
+            router.push('/gerenciamento');
+        }, 3000);
+    }
     return(
-        <button onClick={() => deletePost(id)} className="text-[#352630] font-bold bg-red-600 flex rounded-xl my-1 gap-1 px-2">
-            Deletar <i className="bi bi-x-lg"></i></button>
+        <Link href={`gerenciamento`}
+        onClick={() => deleteClick(id) }
+        className="text-[#352630] font-bold bg-red-600 flex rounded-xl my-1 gap-1 px-2">
+            Deletar <i className="bi bi-x-lg"></i></Link>
     );
 }
