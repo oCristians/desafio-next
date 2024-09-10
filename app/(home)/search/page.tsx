@@ -22,7 +22,6 @@ export default async function Page({
         console.log('currentPage',currentPage)
         return(
             <div className="h-screen flex flex-col bg-[#352630]">
-                <Navbar/>
                 <div className=""><SearchSection posts={posts} count={count}/></div>
                 {totalPages > 1 && (
                     <div className="bg-[#352630]"><Pagination totalPages={totalPages}/></div>
