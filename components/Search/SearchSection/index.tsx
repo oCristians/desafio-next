@@ -1,8 +1,8 @@
 import PostSearchCard from "@/components/Search/PostSearchCard";
 import Search from "..";
-import { SomeProducts } from '@/types/data';
+import { Livro } from '@/types/data';
 
-export default function SearchSection({posts, count}: {posts: SomeProducts[], count: number}){
+export default function SearchSection({posts, count}: {posts: Livro[], count: number}){
     return(
         <div className="bg-[#352630]"><div className="lg:px-8"><Search/></div>
             <div className="flex justify-center">

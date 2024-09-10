@@ -1,4 +1,6 @@
 import prisma from "@/lib/db"
+
+
 const itemsPerPage = 6;
 
 export async function fetchFilteredPosts(query: string, currentPage: number){
