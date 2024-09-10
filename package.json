@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "prisma": {
-  "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "scripts": {
     "dev": "next dev",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
+    "axios": "^1.7.7",
     "bootstrap-icons": "^1.11.3",
     "next": "^14.2.5",
     "react": "^18",

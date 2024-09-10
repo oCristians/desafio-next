@@ -7,6 +7,8 @@ import Link from 'next/link'
 import PostCard from "@/components/PostCard";
 import BestProductsCard from "@/components/Home/BestProductsCard";
 import { getBestProducts } from "@/actions/home/actions";
+import { useState } from "react";
+import Missao from "@/components/Home/Missao";
 export default async function Home() {
   const post = await getBestProducts()
   return (
@@ -28,15 +30,7 @@ export default async function Home() {
           className="bg-[#F6B180] p-3 rounded-xl font-bold text-[#352630] ">Garanta o seu</Link>
       </div>
 
-      <div className="bg-[#E9DFCC] flex flex-col justify-center items-center gap-6 py-8 font-bold text-[#352630] text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
-        <h1>QUEM NÓS SOMOS</h1>
-        <div className="flex flex-col lg:flex-row gap-4 w-19">
-          <div className="bg-[#F6B180] px-2 py-4 rounded-xl gap-1 justify-center items-center flex flex-col">
-            <h1 className="text-center">NOSSOS VALORES</h1>
-            <p className="font-normal text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl 3xl:text-3xl text-center flex justify-center flex-grow-0 flex-shrink-0 w-[200px] text-base">Integridade e honestidade Empenho para com os clientes, parceiros e tecnologia Abertura e respeito para com os outros e empenho para contribuir para o seu desenvolvimento</p>
-          </div>
-        </div>
-      </div>
+      <Missao/>
 
       <Footer/>
     </>
