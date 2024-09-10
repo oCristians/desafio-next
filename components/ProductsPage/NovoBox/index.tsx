@@ -6,7 +6,7 @@ export default function NovoBox() {
         <h1 className="font-bold text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">
           Está a uma página de ser seu.
         </h1>
-        <h2 className="text-center md:w-[300px]">
+        <h2 className="text-center px-1 md:w-[300px]">
           O novo box apresenta um universo rico e cativante das lendas
           japonesas, criaturas misteriosas e seres encantados
         </h2>
