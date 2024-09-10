@@ -1,6 +1,5 @@
+import { Livro } from '@/types/data';
 import { DeleteButton, EditButton, ViewButton } from '../Buttons';
-import { SomeProducts } from '../../../types/data';
-import { Livro } from '@/types/Home/home';
 
 type BestProductsCardProps = {
     post: Livro

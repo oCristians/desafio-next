@@ -8,15 +8,22 @@ export async function deletePost(id:number | undefined){
     })
     revalidatePath('/gerenciamento');
 }
-export async function createPost(post: {name: string, price: number, content: string}) {
+export async function createPost(formData: FormData) {
+    try {
+    const name = formData.get("name") as string;
+    const price = formData.get("price") as string;
+    const content = formData.get("content") as string;
     await prisma.post.create({
         data: {
-            name: post.name,
-            price: post.price,
-            content: post.content,
+            name: name,
+            price: Number(price),
+            content: content,
         },
     });
-    revalidatePath('/gerenciamento');
+    revalidatePath('/gerenciamento/create');
+    }catch{
+        console.error("Erro ao criar post");
+    }
 }
 
 export async function editPost(id: number, post: {name: string, price: number, content: string}) {

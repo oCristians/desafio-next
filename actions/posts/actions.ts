@@ -19,6 +19,12 @@ export async function fetchPosts(currentPage: number){
 
     return {posts, totalPages}
 }
+export async function fetchPostById(id:number | undefined) {
+    const product = await prisma.post.findUnique({
+        where:{id},
+    })
+    return product;
+}
 const itemsAdminPerPage = 4;
 export async function fetchAdminPosts(currentPage: number){
     const offset = (currentPage - 1) * itemsAdminPerPage
