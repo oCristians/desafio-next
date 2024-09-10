@@ -1,16 +1,8 @@
 import Image from "next/image";
 import Navbar from "@/components/Home/Navbar";
 import Link from "next/link";
-import {
-  DeleteButton,
-  EditButton,
-  ViewButton,
-} from "@/components/Gerenciamento/Buttons";
-import { getProducts } from "@/actions/home/actions";
-import PostCard from "@/components/PostCard";
-import PostTableCard from "@/components/Gerenciamento/PostTableCard";
 import Table from "@/components/Gerenciamento/Table";
-import { fetchAdminPosts, fetchPosts } from "@/actions/posts/actions";
+import { fetchAdminPosts} from "@/actions/posts/actions";
 
 export default async function Page({
   searchParams,

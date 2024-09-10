@@ -1,5 +1,5 @@
 import PostCard from "@/components/PostCard";
-import { getBestProducts } from "@/actions/home/actions";
+import { getBestProducts } from "@/actions/posts/actions";
 import { Livro } from "@/types/data";
 
 type BestProductsProps = {

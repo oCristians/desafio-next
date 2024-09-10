@@ -36,3 +36,16 @@ export async function fetchAdminPosts(currentPage: number){
 
     return {posts, totalPages}
 }
+
+export async function getBestProducts(){
+    const posts= await prisma.post.findMany({
+        select: {
+            id: true,
+            name: true,
+            price: true,
+            content: true,
+        },
+        take: 6
+    })
+    return posts;
+}

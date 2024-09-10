@@ -1,7 +1,5 @@
 import Navbar from "@/components/Home/Navbar";
 import Footer from "@/components/Home/Footer";
-
-import { getProducts } from "@/actions/home/actions";
 import CurrentCollection from "@/components/ProductsPage/CurrentCollection";
 import Search from "@/components/Search";
 import Pagination from "@/components/Pagination";
