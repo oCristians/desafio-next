@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Home/Navbar";
 import Link from 'next/link'
 import { DeleteButton, EditButton, ViewButton } from "@/components/Buttons";
 import { getProducts } from "@/actions/home/actions";
@@ -7,8 +7,6 @@ import { SomeProducts } from "@/types/data";
 import PostCard from "@/components/PostCard";
 import PostTableCard from "@/components/PostTableCard";
 import Table from "@/components/Table";
-import Modal from "@/components/Modal";
-import CreateModal from "@/components/Gerenciamento/CreateModal";
 
 export default async function Page() {
     const post = await getProducts()

@@ -9,7 +9,7 @@ export default function Footer() {
                 alt="logo"
                 width={99}
                 height={102}/>
-            <div className="flex justify-center items-center text-2xl flexrow gap-2">
+            <div className="flex justify-center items-center text-2xl flex-col md:flex-row gap-2">
                 <i className="bi bi-whatsapp"></i>
                 <i className="bi bi-facebook"></i>
                 <i className="bi bi-instagram"></i>
@@ -21,7 +21,7 @@ export default function Footer() {
                 <div><p>Avenida 10 de Setembro, 20,</p> São Pedro, Juiz de Fora/MG</div>
             </div>
             </div>
-            <p>Copyright R. Todos direitos reservados</p>
+            <p className="text-center">Copyright R. Todos direitos reservados</p>
         </footer>
     );
 }

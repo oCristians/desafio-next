@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Home/Navbar";
 import Link from 'next/link'
 export default function Page() {
     return(
       <div className="h-screen bg-[#352630]">
-        <Navbar/>
         <div className=" flex justify-center items-center p-20">
           <div className="flex flex-col bg-[#F3A36B] p-10 w-auto rounded-xl gap-15">
             <h1 className="font-bold text-[#352630] text-center text-3xl my-8 mx-5">Faça seu Login:</h1>

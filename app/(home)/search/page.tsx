@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/Home/Navbar";
+import Footer from "@/components/Home/Footer";
 import { useSearchParams } from 'next/navigation'
 import SearchSection from "@/components/Search/SearchSection";
 import { fetchFilteredPosts } from "@/actions/search/actions";
@@ -27,7 +27,6 @@ export default async function Page({
                 {totalPages > 1 && (
                     <div className="bg-[#352630]"><Pagination totalPages={totalPages}/></div>
                 )}
-                <div className="relative w-full bottom-0"><Footer/></div>
             </div>
         );
     }

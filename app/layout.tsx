@@ -9,8 +9,8 @@ const taviraj = Taviraj({
 });
 
 export const metadata: Metadata = {
-  title: "Titulo de teste",
-  description: "Descrição de teste",
+  title: "Clube de ficçao",
+  description: "Os melhores livros de ficção",
 };
 
 export default function RootLayout({

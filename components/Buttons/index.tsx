@@ -15,16 +15,9 @@ export function EditButton({ id }: { id: number }){
     );
 }
 export function DeleteButton({ id }: { id: number }){
-    const router = useRouter()
-    function deleteClick(id:number){
-        deletePost(id)
-        setTimeout(() => {
-            router.push('/gerenciamento');
-        }, 3000);
-    }
     return(
         <Link href={`gerenciamento`}
-        onClick={() => deleteClick(id) }
+        onClick={() => deletePost(id) }
         className="text-[#352630] font-bold bg-red-600 flex rounded-xl my-1 gap-1 px-2">
             Deletar <i className="bi bi-x-lg"></i></Link>
     );

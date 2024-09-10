@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/Home/Navbar";
+import Footer from "@/components/Home/Footer";
 export default function Page() {
     return(
-      <div className="bg-[#352630] h-screen">
-        <Navbar/>
+      <div className="bg-[#352630] h-[85vh]">
       <div className="flex justify-center py-20 flex-col">
         <div className=" flex justify-center items-center">
           <div className="flex flex-col bg-[#F3A36B] p-10 w-auto rounded-xl gap-[16px]">
@@ -21,7 +20,6 @@ export default function Page() {
           </div>
         </div>
         </div>
-        <div className="absolute w-full bottom-0"><Footer/></div>
       </div>
     )
   }
