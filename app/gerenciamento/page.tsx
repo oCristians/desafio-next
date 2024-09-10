@@ -7,11 +7,13 @@ import { SomeProducts } from "@/types/data";
 import PostCard from "@/components/PostCard";
 import PostTableCard from "@/components/PostTableCard";
 import Table from "@/components/Table";
+import Modal from "@/components/Modal";
+import CreateModal from "@/components/Gerenciamento/CreateModal";
 
 export default async function Page() {
     const post = await getProducts()
     return(
-      <div className="flex flex-col gap-6 h-screen bg-[#352630]" >
+        <div className="flex flex-col gap-6 h-screen z-0 bg-[#352630]" >
         <Navbar/>
         <div className="">
           <div className="flex justify-center flex-wrap items-center p-4 gap-16 bg-[#6C4633] rounded-xl text-[#E9DFCC]">

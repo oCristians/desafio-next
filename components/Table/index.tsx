@@ -7,7 +7,7 @@ type SomeProductsProps = {
 
 export default function Table({ posts }: SomeProductsProps) {
   return (
-    <div className="text-[#E9DFCC] flex relative overflow-x-auto shadow-md sml:rounded-lg bg-[#6C4633]">
+    <div className="z-0 text-[#E9DFCC] flex relative overflow-x-auto shadow-md sml:rounded-lg bg-[#6C4633]">
       <table className="w-full text-base text-left">
         <thead className="uppercase bg-[#6C4633]">
           <tr>
