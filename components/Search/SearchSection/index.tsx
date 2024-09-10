@@ -1,4 +1,4 @@
-import PostSearchCard from "@/components/PostSearchCard";
+import PostSearchCard from "@/components/Search/PostSearchCard";
 import Search from "..";
 import { SomeProducts } from '@/types/data';
 

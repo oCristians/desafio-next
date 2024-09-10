@@ -1,9 +1,9 @@
 import Pagination from "@/components/Pagination";
 import PostCard from "@/components/PostCard";
 import Searchs from "@/components/Search";
-import { SomeProducts } from "@/types/data";
+import { Livro } from "@/types/data";
 
-export default function ProductsPage({posts, totalPages}: {posts: SomeProducts[], totalPages: number}){
+export default function ProductsPage({posts, totalPages}: {posts: Livro[], totalPages: number}){
     return(
       <div>
         <div className="flex flex-col items-center bg-[#23161F]">
@@ -12,7 +12,7 @@ export default function ProductsPage({posts, totalPages}: {posts: SomeProducts[]
           <div></div>
         </div>
         {totalPages > 1 && (
-           <div className="bg-[#23161F]"><Pagination totalPages={totalPages}/></div>
+          <div className="bg-[#23161F]"><Pagination totalPages={totalPages}/></div>
         )}
         </div>
     );

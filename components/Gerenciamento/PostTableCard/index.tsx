@@ -1,9 +1,9 @@
 import { DeleteButton, EditButton, ViewButton } from '../Buttons';
-import { SomeProducts } from '../../types/data';
-import { BestProducts } from '@/types/Home/home';
+import { SomeProducts } from '../../../types/data';
+import { Livro } from '@/types/Home/home';
 
 type BestProductsCardProps = {
-    post: BestProducts
+    post: Livro
 }
 export default function PostTableCard({post}:BestProductsCardProps){
     const formattedPrice = post.price.toFixed(2);

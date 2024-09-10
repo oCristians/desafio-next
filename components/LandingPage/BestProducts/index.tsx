@@ -1,6 +1,6 @@
 import PostCard from "@/components/PostCard";
-import { Livro } from "@/types/Home/home";
 import { getBestProducts } from "@/actions/home/actions";
+import { Livro } from "@/types/data";
 
 type BestProductsProps = {
   posts: Livro[];

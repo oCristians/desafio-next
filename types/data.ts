@@ -1,4 +1,4 @@
-export type SomeProducts = {
+export type Livro = {
     id:number;
     name:string;
     price:number;
