@@ -9,11 +9,11 @@ export default function Page() {
             <h1 className="font-bold text-[#352630] text-center text-3xl my-8 mx-5">Faça seu Login:</h1>
             <form className="flex flex-col gap-5" autoComplete="off">
               <input type="text"
-              className="rounded-md px-2 font-bold text-[#352630]"
+              className="rounded-md p-2 font-bold text-[#352630]"
               placeholder="Email"
               ></input>
               <input type="text"
-              className="rounded-md px-2 font-bold text-[#352630]"
+              className="rounded-md p-2 font-bold text-[#352630]"
               placeholder="Senha"
               ></input>
               <div className="flex justify-center text-center">

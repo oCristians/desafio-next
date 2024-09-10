@@ -38,12 +38,12 @@ export default function Navbar() {
         <div className="w-full flex justify-end gap-2">
           <Link
           href="/login"
-          className="bg-[#F6B180] px-3 rounded-xl
+          className="bg-[#F6B180] px-3 my-3 lg:my-0 rounded-xl
           text-sm md:text-md lg:text-xl xl:text-2xl 2xl:text-2xl 3xl:text-3xl flex items-center">Login</Link>
           <Link href="/produtos"
           className="bg-[#F6B180] hidden lg:flex px-2 md:p-3 items-center rounded-xl">Conheça Nosso Catálogo</Link>
           <Link href="/produtos"
-          className="bg-[#F6B180] flex lg:hidden px-2 text-sm md:text-md
+          className="bg-[#F6B180] flex my-3 lg:hidden px-2 text-sm md:text-md
           lg:text-xl xl:text-2xl 2xl:text-2xl 3xl:text-3xl md:p-3 items-center rounded-xl ">Catálogo</Link>
           <Image
             className="md:hidden"
