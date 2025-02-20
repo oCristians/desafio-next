@@ -32,8 +32,6 @@ Rotina
 
     Envie o commit feito para sua branch: git push origin suabranch
 
-Quando estiver tudo prontinho (com autorização do SCRUM Master)
-
     Volte para a main: git checkout main
 
     Atualize a main: git pull
